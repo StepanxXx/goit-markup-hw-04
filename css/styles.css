@@ -422,12 +422,6 @@ span.logo-right-part {
 }
 .footer-social-link:hover {
     background-color: var(--green);
-
-}
-.footer-social-link>svg {
-    width: 24px;
-    height: 24px;
-
 }
 
 /* #endregion */
