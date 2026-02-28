@@ -81,6 +81,7 @@ img {
     display: block;
     max-width: 100%;
     object-fit: cover;
+    height: auto;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -134,13 +135,14 @@ span.logo-right-part {
 .page-header {
     border-bottom: 1px solid var(--cornflower);
 }
-.page-header .container {
+.header-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 40px;
     row-gap: 12px;
     justify-content: space-between;
+    align-items: center;
 }
 .navigation {
     font-weight: 500;
@@ -160,14 +162,10 @@ span.logo-right-part {
     gap: 40px;
 }
 .menu-link {
+    display: block;
     font-size: var(--font-size);
     letter-spacing: 0.02em;
     padding: 24px 0;
-}
-
-.menu-link {
-    font-size: var(--font-size);
-    letter-spacing: 0.02em;
 }
 
 .address-list {
@@ -176,10 +174,12 @@ span.logo-right-part {
     flex-direction: row;
     gap: 40px;
     justify-content: flex-end;
-    padding: 24px 0;
+    align-items: center;
 }
 
 .address-link {
+    display: block;
+    padding: 24px 0;
     font-size: var(--font-size);
     letter-spacing: 0.02em;
     color: var(--slate);
@@ -197,9 +197,13 @@ span.logo-right-part {
 
 /* #region  Hero*/
 .hero {
-    background-color: var(--navy-blue);
     color: var(--white);
     padding: 188px 0;
+    background-image:
+        linear-gradient(var(--grey), var(--grey)), url("../images/bg-people-office.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1440px auto;
 }
 
 .hero-title {
@@ -250,6 +254,17 @@ span.logo-right-part {
 .feature-item-description {
     color: var(--slate);
 }
+.feature-icon {
+    border: 1px solid var(--light-slate);
+    border-radius: 4px;
+    max-width: 264px;
+    height: 112px;
+    background: var(--cloud);
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* #endregion */
 
 /* #region Our Team*/
@@ -272,13 +287,14 @@ span.logo-right-part {
 }
 
 .team-member-wrap {    background-color: var(--white);
-    padding: 32px 0;
+    padding: 32px 16px;
 }
 
 .team-member {
     background-color: var(--white);
     flex-basis: calc((100% - 3 * 24px) / 4);
     border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .team-member-name {
     text-align: center;
@@ -289,6 +305,25 @@ span.logo-right-part {
 .team-member-role {
     color: var(--slate);
     text-align: center;
+}
+
+.team-member-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+.team-member-social-link {
+    background-color: var(--iris);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 /* #endregion */
 
@@ -315,6 +350,11 @@ span.logo-right-part {
     flex-basis: calc((100% - 48px) / 3);
 }
 
+.portfolio-item:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    cursor: pointer;
+}
+
 .portfolio-item-wrap {
     border: 1px solid var(--cornflower);
     border-top: none;
@@ -328,21 +368,67 @@ span.logo-right-part {
 /* #endregion */
 
 /* #region  Footer*/
-.footer-block {
+.page-footer {
     padding: 100px 0;
 }
+
+.footer-container {
+    display: flex;
+    gap: 120px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
 .footer-description {
     width: 264px;
 }
-.footer-block,
-.footer-block span.logo-right-part {
+.page-footer,
+.page-footer span.logo-right-part {
     background-color: var(--navy-blue);
     color: var(--cloud);
 }
 
-.footer-block .logo-link {
+.page-footer .logo-link {
     display: inline-block;
     margin-bottom: 16px;
+    padding: 0;
 }
+
+.footer-social-title {
+    font-weight: 500;
+    font-size: var(--font-size);
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.footer-social-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.footer-social-link {
+    background-color: var(--iris);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.footer-social-link:hover {
+    background-color: var(--green);
+
+}
+.footer-social-link>svg {
+    width: 24px;
+    height: 24px;
+
+}
+
 /* #endregion */
 
