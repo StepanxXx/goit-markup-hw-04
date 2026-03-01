@@ -437,10 +437,12 @@ span.logo-right-part {
     justify-content: flex-start;
     align-items: baseline;
 }
+.footer-info {
+    margin-right: 120px;
+}
 
 .footer-description {
     width: 264px;
-    margin-right: 120px
 }
 .page-footer,
 .page-footer span.logo-right-part {
