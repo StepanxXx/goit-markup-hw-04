@@ -134,6 +134,7 @@ span.logo-right-part {
 /* #region navigation */
 .page-header {
     border-bottom: 1px solid var(--cornflower);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container {
     display: flex;
@@ -169,15 +170,21 @@ span.logo-right-part {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.menu-link.active {
+    position: relative;
+    color: var(--ocean);
+}
+
 .menu-link.active::after {
     content: "";
     display: block;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
     width: 100%;
     height: 4px;
     border-radius: 2px;
     background-color: var(--ocean);
-    margin-top: 20px;
-    margin-bottom: -24px;
 }
 
 .address-list {
@@ -212,11 +219,13 @@ span.logo-right-part {
 .hero {
     color: var(--white);
     padding: 188px 0;
+    max-width: 1440px;
+    margin: 0 auto;
     background-image:
         linear-gradient(var(--grey), var(--grey)), url("../images/bg-people-office.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 1440px auto;
+    background-size: cover
 }
 
 .hero-title {
@@ -300,8 +309,9 @@ span.logo-right-part {
     justify-content: space-around;
 }
 
-.team-member-wrap {    background-color: var(--white);
-    padding: 32px 16px;
+.team-member-wrap {
+    background-color: var(--white);
+    padding: 32px 0;
 }
 
 .team-member {
@@ -338,7 +348,18 @@ span.logo-right-part {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.team-member-social-link:hover,
+.team-member-social-link:focus {
+    background-color: var(--ocean);
+}
+
+.team-member-social-link .icon {
+    fill: var(--cloud);
+}
+
 /* #endregion */
 
 /* #region  Our Portfolio*/
@@ -412,13 +433,14 @@ span.logo-right-part {
 
 .footer-container {
     display: flex;
-    gap: 120px;
     flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: baseline;
 }
 
 .footer-description {
     width: 264px;
+    margin-right: 120px
 }
 .page-footer,
 .page-footer span.logo-right-part {
@@ -459,8 +481,13 @@ span.logo-right-part {
     border-radius: 50%;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-social-link:hover {
+.footer-social-link:hover,
+.footer-social-link:focus {
     background-color: var(--green);
+}
+
+.footer-social-link .icon {
+    fill: var(--cloud);
 }
 
 /* #endregion */
